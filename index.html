@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#183e36" />
+    <meta name="theme-color" content="#2c43ce" />
     <meta
       name="description"
       content="A better home starts here. Shop interior design, styling, and renovation planning services with HomeGenie by SECHA."
     />
-    <title>HomeGenie by SECHA — Make room for better living.</title>
-    <link rel="icon" href="./assets/favicon.svg?v=3.0.0" type="image/svg+xml" />
-    <link rel="stylesheet" href="./assets/styles.css?v=3.0.0" />
-    <script src="./assets/config.js?v=3.0.0" defer></script>
-    <script src="./assets/app.js?v=3.0.0" defer></script>
+    <title>HomeGenie by SECHA — A home that feels like you.</title>
+    <link rel="icon" href="./assets/favicon.svg?v=4.0.0" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css?v=4.0.0" />
+    <script src="./assets/config.js?v=4.0.0" defer></script>
+    <script src="./assets/app.js?v=4.0.0" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#shop">Skip to services</a>
     <div class="announcement">
-      <span>A little guidance. A lot of possibility.</span
+      <span>Good design starts with a little guidance.</span
       ><a href="#shop"
-        >Find your home’s next chapter
+        >Discover services from Rp 350.000
         <svg
           class="icon"
           viewBox="0 0 24 24"
@@ -55,13 +55,28 @@
             ><small>BY SECHA</small></span
           ></a
         >
-        <nav id="main-nav" aria-label="Main navigation">
-          <a href="#shop" class="nav-active">Explore services</a
-          ><a href="#how-it-works">How it works</a
-          ><a href="#our-promise">The HomeGenie way</a>
-        </nav>
+
+        <label class="search-box header-search"
+          ><svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 4 4" /></svg
+          ><input
+            id="search"
+            type="search"
+            placeholder="What’s your home wishing for?"
+            aria-label="Search services"
+        /></label>
         <div class="header-actions">
-          <button class="location-button" data-location>
+          <button class="location-button" data-location="">
             <svg
               class="icon"
               viewBox="0 0 24 24"
@@ -89,7 +104,7 @@
             </svg></button
           ><button
             class="icon-button saved-header"
-            data-show-saved
+            data-show-saved=""
             aria-label="View saved services"
           >
             <svg
@@ -108,7 +123,7 @@
             ><span class="saved-count" hidden>0</span></button
           ><button
             class="cart-button"
-            data-cart
+            data-cart=""
             aria-label="Open shopping cart"
           >
             <svg
@@ -146,22 +161,59 @@
           </button>
         </div>
       </div>
+      <div class="header-bottom">
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="#shop" class="nav-active">Explore services</a
+          ><a href="#how-it-works">How it works</a
+          ><a href="#our-promise">The HomeGenie way</a>
+        </nav>
+        <button class="header-genie-link" data-genie="">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"
+            />
+            <path d="m20 2 .7 1.3L22 4l-1.3.7L20 6l-.7-1.3L18 4l1.3-.7Z" />
+          </svg>
+          A little unsure? Ask your Genie
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M6 18 18 6M6 6h12v12" />
+          </svg>
+        </button>
+      </div>
     </header>
     <main>
       <section class="hero section-shell">
         <div class="hero-copy">
           <div class="eyebrow">
-            <span class="little-star">✳</span> A LITTLE GENIE. A BIG DIFFERENCE.
+            <span class="little-star">✳︎</span> GOOD SPACES. BETTER EVERYDAYS.
           </div>
-          <h1>Make room<br />for <span>better living.</span></h1>
+          <h1>Your home.<br />Your next<br /><span>great idea.</span></h1>
           <p>
-            Good design. Trusted expertise. Your kind of home.<br />Find the
-            right service, add a little inspiration,<br class="desktop-break" />
-            and let’s make it happen.
+            From “what if” to “this feels like me.”<br />Shop thoughtful
+            interior services and renovation plans.<br class="desktop-break" />
+            A little help for a home that’s all yours.
           </p>
           <div class="hero-buttons">
             <a href="#shop" class="button lime"
-              >Find your home’s next thing
+              >Find your starting point
               <svg
                 class="icon"
                 viewBox="0 0 24 24"
@@ -172,8 +224,8 @@
                 stroke-linejoin="round"
                 aria-hidden="true"
               >
-                <path d="M6 18 18 6M6 6h12v12" /></svg></a
-            ><button class="genie-text" data-genie>
+                <path d="M5 12h14m-5-5 5 5-5 5" /></svg></a
+            ><button class="genie-text" data-genie="">
               <svg
                 class="icon"
                 viewBox="0 0 24 24"
@@ -189,29 +241,10 @@
                 />
                 <path d="m20 2 .7 1.3L22 4l-1.3.7L20 6l-.7-1.3L18 4l1.3-.7Z" />
               </svg>
-              Not sure? Ask your Genie
+              Meet your Genie
             </button>
           </div>
           <div class="hero-reassurance">
-            <span class="mini-avatars"><i>H</i><i>G</i><i>♡</i></span
-            ><span
-              >For the place you call home.<small
-                >Thoughtfully planned. Beautifully personal.</small
-              ></span
-            >
-          </div>
-        </div>
-        <div class="hero-art">
-          <img
-            class="hero-image"
-            src="./assets/images/living-room.jpg"
-            alt="Light-filled living room with natural textures, plants, and thoughtful furniture"
-            width="900"
-            height="900"
-            fetchpriority="high"
-          />
-          <div class="hero-image-label">
-            ROOM TO BE YOU
             <svg
               class="icon"
               viewBox="0 0 24 24"
@@ -222,13 +255,26 @@
               stroke-linejoin="round"
               aria-hidden="true"
             >
-              <path d="M6 18 18 6M6 6h12v12" />
+              <path d="m5 12 4 4L19 6" />
             </svg>
+            Clear packages. Your pace. A little magic.
           </div>
-          <span class="hero-sticker"
-            >A fresh space.<br />A fresh start.<span>✳</span></span
-          ><button class="hero-genie" data-genie>
-            <span class="genie-face"
+        </div>
+        <div class="hero-art">
+          <div class="image-orbit"></div>
+          <img
+            class="hero-image"
+            src="./assets/images/living-room.jpg"
+            alt="A light-filled living room with natural textures, thoughtful furniture, and room to make it your own"
+            width="900"
+            height="900"
+            fetchpriority="high"
+          /><span class="hero-sticker"
+            >Less guesswork.<br />More good living.<span>✳︎</span></span
+          ><span class="hero-image-label"
+            >A SPACE TO CALL YOUR OWN <span>01 / THE LIVING EDIT</span></span
+          ><button class="hero-detail-card" data-detail="design-consultation">
+            <span class="detail-card-icon"
               ><svg
                 class="icon"
                 viewBox="0 0 24 24"
@@ -246,11 +292,12 @@
                   d="m20 2 .7 1.3L22 4l-1.3.7L20 6l-.7-1.3L18 4l1.3-.7Z"
                 /></svg></span
             ><span
-              >Your home has a wish.<small
-                >Let’s find out what it is.</small
+              >A fresh perspective<small
+                >Your first design consultation</small
               ></span
-            ><span class="circle-arrow"
-              ><svg
+            ><span class="detail-card-price"
+              >Rp 350.000
+              <svg
                 class="icon"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -260,7 +307,7 @@
                 stroke-linejoin="round"
                 aria-hidden="true"
               >
-                <path d="M5 12h14m-5-5 5 5-5 5" /></svg
+                <path d="M6 18 18 6M6 6h12v12" /></svg
             ></span>
           </button>
         </div>
@@ -282,7 +329,7 @@
           >
             <path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z" />
             <path d="m8 11 3 3 5-5" /></svg
-          ><span>Thoughtfully scoped services</span>
+          ><span>Clear prices &amp; package scopes</span>
         </div>
         <div>
           <svg
@@ -296,7 +343,7 @@
             aria-hidden="true"
           >
             <path d="m4 6 8-3 8 3v12l-8 3-8-3V6Zm8-3v18M4 6l8 3 8-3" /></svg
-          ><span>Clear, upfront package prices</span>
+          ><span>Design that fits real life</span>
         </div>
         <div>
           <svg
@@ -311,7 +358,7 @@
           >
             <circle cx="12" cy="12" r="9" />
             <path d="M12 7v5l3 2" /></svg
-          ><span>Your pace. Your next step.</span>
+          ><span>A first step, at your pace</span>
         </div>
         <div>
           <svg
@@ -328,20 +375,139 @@
               d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"
             />
             <path d="m20 2 .7 1.3L22 4l-1.3.7L20 6l-.7-1.3L18 4l1.3-.7Z" /></svg
-          ><span>A little guidance, always</span>
+          ><span>Guidance from your Genie</span>
         </div>
+      </section>
+      <section
+        aria-label="Explore by service type"
+        class="category-section section-shell"
+      >
+        <div class="category-intro">
+          <span class="eyebrow">WHAT’S YOUR NEXT CHAPTER?</span>
+          <h2>Every home has<br />a starting point.</h2>
+        </div>
+        <button
+          class="category-tile peach"
+          data-category-filter="Design & styling"
+          data-jump=""
+        >
+          <span class="category-number">01 /</span
+          ><span class="category-symbol"
+            ><svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 12a2 2 0 0 1 4 0v3h10v-3a2 2 0 0 1 4 0v7H3v-7Zm2-2V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M5 19v2m14-2v2"
+              /></svg></span
+          ><strong>Design &amp; styling</strong
+          ><span class="category-description"
+            >Make your space feel more you.</span
+          ><span class="category-arrow"
+            ><svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 18 18 6M6 6h12v12" /></svg
+          ></span></button
+        ><button
+          class="category-tile lavender"
+          data-category-filter="Planning & renovation"
+          data-jump=""
+        >
+          <span class="category-number">02 /</span
+          ><span class="category-symbol"
+            ><svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="m14 6 4-4a6 6 0 0 1-7 8L4 17a2 2 0 0 0 3 3l7-7a6 6 0 0 0 8-7l-4 4-4-4Z"
+              /></svg></span
+          ><strong>Planning &amp; renovation</strong
+          ><span class="category-description"
+            >Big ideas, with a clearer plan.</span
+          ><span class="category-arrow"
+            ><svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 18 18 6M6 6h12v12" /></svg
+          ></span></button
+        ><button
+          class="category-tile yellow"
+          data-category-filter="Refresh & finishes"
+          data-jump=""
+        >
+          <span class="category-number">03 /</span
+          ><span class="category-symbol"
+            ><svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="m4 6 8-3 8 3v12l-8 3-8-3V6Zm8-3v18M4 6l8 3 8-3"
+              /></svg></span
+          ><strong>Refresh &amp; finishes</strong
+          ><span class="category-description"
+            >Little changes. A whole new feeling.</span
+          ><span class="category-arrow"
+            ><svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 18 18 6M6 6h12v12" /></svg
+          ></span>
+        </button>
       </section>
       <section class="shop-section section-shell" id="shop">
         <div class="section-top">
           <div>
-            <div class="eyebrow">THE HOMEGENIE SERVICE EDIT</div>
-            <h2>Good things for your space.</h2>
+            <div class="eyebrow">SMALL STARTS. GOOD POSSIBILITIES.</div>
+            <h2>A little help.<br /><span>A lot more home.</span></h2>
             <p>
-              A fresh perspective or a bigger plan. Find your starting point.
+              Considered services. Clear deliverables. Pick the next good thing
+              for your space.
             </p>
           </div>
           <a href="#how-it-works" class="inline-link"
-            >New here? Here’s how it works
+            >How it all comes together
             <svg
               class="icon"
               viewBox="0 0 24 24"
@@ -384,17 +550,17 @@
               data-category-filter="Design & styling"
               aria-pressed="false"
             >
-              Design & styling</button
+              Design &amp; styling</button
             ><button
               data-category-filter="Planning & renovation"
               aria-pressed="false"
             >
-              Planning & renovation</button
+              Planning &amp; renovation</button
             ><button
               data-category-filter="Refresh & finishes"
               aria-pressed="false"
             >
-              Refresh & finishes
+              Refresh &amp; finishes
             </button>
           </div>
           <div class="shop-sort">
@@ -407,25 +573,7 @@
           </div>
         </div>
         <div class="shop-search-row">
-          <label class="search-box"
-            ><svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <circle cx="10.5" cy="10.5" r="6.5" />
-              <path d="m16 16 4 4" /></svg
-            ><input
-              id="search"
-              type="search"
-              placeholder="Find a service for your space…"
-              aria-label="Search services" /></label
-          ><span id="results-count" aria-live="polite"
+          <span id="results-count" aria-live="polite"
             >6 considered services. One happier home.</span
           ><button class="clear-filters" hidden>
             Clear filters
@@ -505,13 +653,15 @@
               </button>
             </div>
             <div class="product-info">
-              <div class="product-eyebrow">Interior consultation</div>
+              <div class="product-eyebrow">
+                <span class="product-index">01</span> Interior consultation
+              </div>
               <button class="product-name" data-detail="design-consultation">
                 The fresh perspective
               </button>
               <p>60-minute session</p>
               <div class="product-footer">
-                <strong>Rp 350.000</strong
+                <strong><small>PACKAGE PRICE</small>Rp 350.000</strong
                 ><button
                   class="add-button"
                   data-add="design-consultation"
@@ -577,13 +727,15 @@
               </button>
             </div>
             <div class="product-info">
-              <div class="product-eyebrow">Room styling package</div>
+              <div class="product-eyebrow">
+                <span class="product-index">02</span> Room styling package
+              </div>
               <button class="product-name" data-detail="room-styling">
                 A room that feels like you
               </button>
               <p>one room · up to 20 m²</p>
               <div class="product-footer">
-                <strong>Rp 1.500.000</strong
+                <strong><small>PACKAGE PRICE</small>Rp 1.500.000</strong
                 ><button
                   class="add-button"
                   data-add="room-styling"
@@ -649,13 +801,15 @@
               </button>
             </div>
             <div class="product-info">
-              <div class="product-eyebrow">Kitchen planning package</div>
+              <div class="product-eyebrow">
+                <span class="product-index">03</span> Kitchen planning package
+              </div>
               <button class="product-name" data-detail="kitchen-layout">
                 Good things start in the kitchen
               </button>
               <p>one kitchen · up to 12 m²</p>
               <div class="product-footer">
-                <strong>Rp 2.500.000</strong
+                <strong><small>PACKAGE PRICE</small>Rp 2.500.000</strong
                 ><button
                   class="add-button"
                   data-add="kitchen-layout"
@@ -721,13 +875,16 @@
               </button>
             </div>
             <div class="product-info">
-              <div class="product-eyebrow">Colour & finish consultation</div>
+              <div class="product-eyebrow">
+                <span class="product-index">04</span> Colour &amp; finish
+                consultation
+              </div>
               <button class="product-name" data-detail="colour-consultation">
                 Find your kind of colour
               </button>
               <p>one room</p>
               <div class="product-footer">
-                <strong>Rp 450.000</strong
+                <strong><small>PACKAGE PRICE</small>Rp 450.000</strong
                 ><button
                   class="add-button"
                   data-add="colour-consultation"
@@ -793,13 +950,15 @@
               </button>
             </div>
             <div class="product-info">
-              <div class="product-eyebrow">Renovation site assessment</div>
+              <div class="product-eyebrow">
+                <span class="product-index">05</span> Renovation site assessment
+              </div>
               <button class="product-name" data-detail="renovation-visit">
                 Let’s see the possibilities
               </button>
               <p>one visit · Jabodetabek</p>
               <div class="product-footer">
-                <strong>Rp 500.000</strong
+                <strong><small>PACKAGE PRICE</small>Rp 500.000</strong
                 ><button
                   class="add-button"
                   data-add="renovation-visit"
@@ -865,13 +1024,15 @@
               </button>
             </div>
             <div class="product-info">
-              <div class="product-eyebrow">Decor styling plan</div>
+              <div class="product-eyebrow">
+                <span class="product-index">06</span> Decor styling plan
+              </div>
               <button class="product-name" data-detail="finishing-touches">
                 A little finishing magic
               </button>
               <p>one room</p>
               <div class="product-footer">
-                <strong>Rp 750.000</strong
+                <strong><small>PACKAGE PRICE</small>Rp 750.000</strong
                 ><button
                   class="add-button"
                   data-add="finishing-touches"
@@ -913,7 +1074,7 @@
             No services match this search. Try another word or explore all
             services.
           </p>
-          <button class="button dark" data-reset>
+          <button class="button dark" data-reset="">
             Explore all services
             <svg
               class="icon"
@@ -965,21 +1126,19 @@
               <path d="m20 2 .7 1.3L22 4l-1.3.7L20 6l-.7-1.3L18 4l1.3-.7Z" />
             </svg>
           </div>
-          <span class="orbit-note note-one">A little inspiration</span
-          ><span class="orbit-note note-two">A clearer direction</span
-          ><span class="orbit-note note-three">A place to begin</span
-          ><span class="tiny-orbit">✳</span>
+          <span class="genie-handwriting"
+            >a little clarity,<br />a little magic.</span
+          ><span class="tiny-orbit">✳︎</span>
         </div>
         <div class="genie-feature-copy">
-          <div class="eyebrow">MEET YOUR PERSONAL HOME GENIE</div>
-          <h2>Big ideas?<br />Let’s find your first step.</h2>
+          <div class="eyebrow">YOUR PERSONAL HOME GENIE</div>
+          <h2>Big ideas.<br />A little direction.</h2>
           <p>
-            You don’t have to know the difference between a moodboard and a
-            material board. Tell your Genie about your space, and find a service
-            that makes sense for you.
+            Not sure where to begin? Tell your Genie about your space, your
+            plans, and your budget. We’ll help you find a good first step.
           </p>
-          <button class="button dark" data-genie>
-            Let’s make a little magic
+          <button class="button dark" data-genie="">
+            Let’s figure it out together
             <svg
               class="icon"
               viewBox="0 0 24 24"
@@ -996,15 +1155,16 @@
               <path d="m20 2 .7 1.3L22 4l-1.3.7L20 6l-.7-1.3L18 4l1.3-.7Z" />
             </svg></button
           ><span class="feature-footnote"
-            >A guided recommendation. No pressure, no commitment.</span
+            >Guided recommendations. No pressure, no commitment.</span
           >
         </div>
+        <span class="genie-background-word" aria-hidden="true">hello.</span>
       </section>
       <section class="how-section section-shell" id="how-it-works">
         <div class="section-top">
           <div>
-            <div class="eyebrow">LESS OVERWHELM. MORE “I LOVE IT HERE.”</div>
-            <h2>A better home, in a few good steps.</h2>
+            <div class="eyebrow">GOOD THINGS, ONE STEP AT A TIME.</div>
+            <h2>From wish list to real life.</h2>
           </div>
           <p>We make the beginning feel easy.<br />You make it yours.</p>
         </div>
@@ -1084,8 +1244,8 @@
       </section>
       <section class="promise-section section-shell" id="our-promise">
         <div>
-          <div class="eyebrow">THE HOMEGENIE WAY</div>
-          <h2>It’s your home.<br />It should feel like it.</h2>
+          <div class="eyebrow">THOUGHTFULLY HOMEGENIE</div>
+          <h2>Good design.<br />For the life you live.</h2>
           <p>
             We’re here for considered choices, useful advice, and spaces that
             work for real life. From the first question to the finishing
@@ -1149,13 +1309,13 @@
         </div>
       </section>
       <section class="last-call section-shell">
-        <span>✳</span>
+        <span aria-hidden="true">✳︎</span>
         <div>
-          <p>YOUR NEXT CHAPTER STARTS AT HOME.</p>
-          <h2>Let’s make it a good one.</h2>
+          <p>YOUR HOME’S NEXT CHAPTER</p>
+          <h2>Make yourself<br /><em>more at home.</em></h2>
         </div>
         <a class="button lime" href="#shop"
-          >Find your little bit of magic
+          >Find your next good thing
           <svg
             class="icon"
             viewBox="0 0 24 24"
@@ -1199,13 +1359,13 @@
         </div>
         <div>
           <span>EXPLORE</span><a href="#shop">Shop services</a
-          ><button data-genie>Meet your Genie</button
+          ><button data-genie="">Meet your Genie</button
           ><a href="#how-it-works">How it works</a>
         </div>
         <div>
           <span>GOOD TO KNOW</span
-          ><button data-policy="service">Service & scheduling</button
-          ><button data-policy="refund">Cancellations & refunds</button
+          ><button data-policy="service">Service &amp; scheduling</button
+          ><button data-policy="refund">Cancellations &amp; refunds</button
           ><button data-policy="privacy">Privacy</button>
         </div>
         <div class="footer-note">

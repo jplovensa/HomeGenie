@@ -375,7 +375,7 @@ async function showReceipt(reference) {
 async function init() {
   try {
     const response = await fetch(
-      new URL("./assets/catalog.json?v=3.0.0", document.baseURI),
+      new URL("./assets/catalog.json?v=4.0.0", document.baseURI),
     );
     if (!response.ok) throw new Error("Catalog unavailable");
     state.products = await response.json();
@@ -434,6 +434,8 @@ async function init() {
         state.category = button.dataset.categoryFilter;
         state.onlySaved = false;
         filterProducts();
+        if (button.hasAttribute("data-jump"))
+          $("#shop").scrollIntoView({ behavior: "smooth" });
       } else if (
         button.hasAttribute("data-reset") ||
         button.classList.contains("clear-filters")
@@ -487,6 +489,12 @@ async function init() {
     $("#search").addEventListener("input", (event) => {
       state.search = event.target.value;
       filterProducts();
+    });
+    $("#search").addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        $("#shop").scrollIntoView({ behavior: "smooth" });
+      }
     });
     $("#sort").addEventListener("change", (event) => {
       state.sort = event.target.value;
