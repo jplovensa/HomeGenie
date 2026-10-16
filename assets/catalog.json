@@ -1,0 +1,125 @@
+[
+  {
+    "id": "design-consultation",
+    "name": "The fresh perspective",
+    "category": "Design & styling",
+    "eyebrow": "Interior consultation",
+    "price": 350000,
+    "unit": "60-minute session",
+    "image": "living-room.jpg",
+    "imagePosition": "center",
+    "badge": "A great place to start",
+    "description": "Big ideas start with a little conversation. Get an expert perspective on your space, style, and next steps.",
+    "includes": [
+      "60-minute online design consultation",
+      "Review of one room and your inspiration",
+      "A written action plan and priority checklist"
+    ],
+    "timeline": "Choose your preferred date at checkout. The team confirms availability after payment.",
+    "delivery": "Online consultation",
+    "room": "Living room"
+  },
+  {
+    "id": "room-styling",
+    "name": "A room that feels like you",
+    "category": "Design & styling",
+    "eyebrow": "Room styling package",
+    "price": 1500000,
+    "unit": "one room · up to 20 m²",
+    "image": "living-room.jpg",
+    "imagePosition": "right",
+    "badge": "The full picture",
+    "description": "A cohesive look for the room you spend your life in. Bring your favorite pieces together with a personal design plan.",
+    "includes": [
+      "One concept and material moodboard",
+      "Furniture layout for one room up to 20 m²",
+      "A curated shopping list",
+      "One round of design revisions"
+    ],
+    "timeline": "Design delivery within 7 working days after the project brief is confirmed.",
+    "delivery": "Digital design package",
+    "room": "Living room"
+  },
+  {
+    "id": "kitchen-layout",
+    "name": "Good things start in the kitchen",
+    "category": "Planning & renovation",
+    "eyebrow": "Kitchen planning package",
+    "price": 2500000,
+    "unit": "one kitchen · up to 12 m²",
+    "image": "kitchen.jpg",
+    "imagePosition": "center",
+    "badge": "Made for everyday living",
+    "description": "Better flow. Clever storage. More space for everyday rituals. Get a thoughtful plan before the renovation begins.",
+    "includes": [
+      "One kitchen layout up to 12 m²",
+      "Cabinet and storage concept",
+      "Material and finish recommendations",
+      "One round of layout revisions"
+    ],
+    "timeline": "Design delivery within 10 working days after measurements and brief are confirmed.",
+    "delivery": "Digital design package",
+    "room": "Kitchen"
+  },
+  {
+    "id": "colour-consultation",
+    "name": "Find your kind of colour",
+    "category": "Refresh & finishes",
+    "eyebrow": "Colour & finish consultation",
+    "price": 450000,
+    "unit": "one room",
+    "image": "finishes.jpg",
+    "imagePosition": "center",
+    "badge": "Small change, big feeling",
+    "description": "From a softer white to a braver shade, discover a palette that brings your room together.",
+    "includes": [
+      "45-minute online colour consultation",
+      "A coordinated wall and finish palette",
+      "Product and finish specifications for one room"
+    ],
+    "timeline": "Palette delivered within 3 working days after your consultation.",
+    "delivery": "Online consultation + palette",
+    "room": "Living room"
+  },
+  {
+    "id": "renovation-visit",
+    "name": "Let’s see the possibilities",
+    "category": "Planning & renovation",
+    "eyebrow": "Renovation site assessment",
+    "price": 500000,
+    "unit": "one visit · Jabodetabek",
+    "image": "kitchen.jpg",
+    "imagePosition": "left",
+    "badge": "Plan with confidence",
+    "description": "A considered first step before a bigger project. Walk through your plans with a specialist at your property.",
+    "includes": [
+      "One site visit up to 90 minutes",
+      "Review of your renovation priorities",
+      "Basic site measurements",
+      "A project scope summary; construction quoted separately"
+    ],
+    "timeline": "Choose a preferred visit date. Service is available in Jakarta, Bogor, Depok, Tangerang, and Bekasi.",
+    "delivery": "In-person assessment",
+    "room": "Whole home"
+  },
+  {
+    "id": "finishing-touches",
+    "name": "A little finishing magic",
+    "category": "Refresh & finishes",
+    "eyebrow": "Decor styling plan",
+    "price": 750000,
+    "unit": "one room",
+    "image": "styling.jpg",
+    "imagePosition": "center",
+    "badge": "Make it feel like home",
+    "description": "The little details make the biggest difference. Discover the lighting, textures, and accessories that finish your space.",
+    "includes": [
+      "One decor and accessory moodboard",
+      "A curated list of up to 10 decor pieces",
+      "Styling and placement guidance for one room"
+    ],
+    "timeline": "Your styling plan is delivered within 5 working days after the brief is confirmed. Physical products are purchased separately.",
+    "delivery": "Digital styling plan",
+    "room": "Living room"
+  }
+]

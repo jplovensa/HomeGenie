@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: homegenie-commerce
+    runtime: node
+    region: singapore
+    plan: free
+    buildCommand: npm test
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: MIDTRANS_SERVER_KEY
+        sync: false
+      - key: ORDER_SIGNING_SECRET
+        generateValue: true
+      - key: MIDTRANS_IS_PRODUCTION
+        value: "false"
+      - key: SITE_URL
+        value: https://jplovensa.github.io/HomeGenie/
+      - key: ALLOWED_ORIGINS
+        value: https://jplovensa.github.io

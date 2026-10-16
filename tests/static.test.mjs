@@ -4,48 +4,54 @@ import { readFile, access } from "node:fs/promises";
 import { Script } from "node:vm";
 import path from "node:path";
 const html = await readFile("index.html", "utf8");
-
-test("homepage is real HTML without a JavaScript rendering dependency", () => {
+const catalog = JSON.parse(await readFile("assets/catalog.json", "utf8"));
+test("homepage contains the complete HomeGenie storefront without runtime rendering", () => {
   assert.match(html, /<h1[\s>]/);
-  assert.match(html, /A little magic/);
-  assert.match(html, /data-category="Kitchen makeover"/);
-  assert.match(html, /class="service-card"/);
-  assert.doesNotMatch(html, /\/src\/|\.jsx|@vite|type="module"/);
-});
-
-test("every local HTML asset uses a project-safe relative path and exists", async () => {
-  const paths = [...html.matchAll(/(?:src|href)="([^"#][^"]*)"/g)]
-    .map((match) => match[1])
-    .filter((value) => !value.startsWith("#"));
-  assert(paths.length >= 7);
-  for (const asset of paths) {
-    assert(asset.startsWith("./assets/"), `Unexpected asset path: ${asset}`);
-    await access(asset);
+  assert.match(html, /HomeGenie/);
+  assert.doesNotMatch(
+    html,
+    /HomeGenia|homegenia|\/src\/|\.jsx|@vite|type="module"/,
+  );
+  for (const p of catalog) {
+    assert(html.includes(`data-product="${p.id}"`));
+    assert(html.includes(p.name));
+    assert(html.includes(`data-price="${p.price}"`));
   }
 });
-
-test("font files referenced in CSS are local and available", async () => {
-  const css = await readFile("assets/styles.css", "utf8");
-  const urls = [...css.matchAll(/url\(['"]?([^)'"\s]+)['"]?\)/g)].map(
-    (match) => match[1],
+test("all HTML assets have project-safe relative paths and exist", async () => {
+  const paths = [...html.matchAll(/(?:src|href)="([^"#][^"]*)"/g)].map(
+    (m) => m[1],
   );
-  assert.equal(urls.length, 4);
-  for (const url of urls) await access(path.resolve("assets", url));
+  assert(paths.length >= 10);
+  for (const file of paths) {
+    assert(file.startsWith("./assets/"), file);
+    await access(file);
+  }
 });
-
-test("browser enhancement script is valid standalone JavaScript", async () => {
-  const source = await readFile("assets/app.js", "utf8");
-  assert.doesNotThrow(() => new Script(source));
-  assert.doesNotMatch(source, /^import\s/m);
+test("every catalog image and CSS font is bundled locally", async () => {
+  const css = await readFile("assets/styles.css", "utf8");
+  const fonts = [...css.matchAll(/url\(['"]?([^)'"\s]+)['"]?\)/g)].map(
+    (m) => m[1],
+  );
+  assert.equal(fonts.length, 4);
+  for (const font of fonts) await access(path.resolve("assets", font));
+  for (const p of catalog) await access("assets/images/" + p.image);
 });
-
-test("production package contains the exact root website", async () => {
+test("cart and configuration scripts are standalone JavaScript", async () => {
+  for (const file of ["assets/app.js", "assets/config.js"]) {
+    const source = await readFile(file, "utf8");
+    assert.doesNotThrow(() => new Script(source));
+    assert.doesNotMatch(source, /^import\s/m);
+  }
+});
+test("Pages artifact exactly matches root HTML, scripts, styles, and catalog", async () => {
   for (const file of [
     "index.html",
     "assets/app.js",
+    "assets/config.js",
     "assets/styles.css",
+    "assets/catalog.json",
     ".nojekyll",
-  ]) {
-    assert.deepEqual(await readFile(file), await readFile(`_site/${file}`));
-  }
+  ])
+    assert.deepEqual(await readFile(file), await readFile("_site/" + file));
 });

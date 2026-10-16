@@ -1,4 +1,4 @@
-name: Deploy HomeGenia to GitHub Pages
+name: Deploy HomeGenie to GitHub Pages
 
 on:
   push:
