@@ -1,29 +1,37 @@
 # HomeGenia by SECHA
 
-Responsive interior and renovation marketplace concept built with React and Vite. Inter fonts and imagery are bundled locally.
+A responsive interior and renovation marketplace concept using static HTML, CSS, and JavaScript. There are no runtime or build dependencies. All page content is present in `index.html` before JavaScript runs, and all photos, icons, and Inter fonts are local.
 
-## Development
+## GitHub Pages
+
+The repository root is the deployable website. Both supported Pages modes work:
+
+- **Deploy from a branch:** Settings → Pages → Source → Deploy from a branch → `main` → `/ (root)`.
+- **GitHub Actions:** Settings → Pages → Source → GitHub Actions. The included workflow copies the static site into `_site/` and deploys it.
+
+The website URL is `https://jplovensa.github.io/HomeGenie/`. All resources use relative URLs, so project hosting and custom domains work. `.nojekyll` prevents unnecessary Jekyll processing. No JSX, Node modules, CDN, or transformation is needed to serve the site.
+
+## Local development
+
+With Node 18 or later:
 
 ```sh
-npm ci --cache /workspace/.npm-cache
-npm run dev -- --port 5173
+npm run dev
 ```
 
-## Production
+Open `http://localhost:5173/` or `http://localhost:5173/HomeGenie/`. No `npm install` is needed. Alternatively, any static HTTP server can serve the repository root.
+
+Optional production packaging:
 
 ```sh
 npm run build
 npm run preview
 ```
 
-Includes service category filters, session favorites, location selection, and a guided Genie assistant with room/budget recommendations. The assistant uses local scripted responses; booking, live inventory, real customer reviews, and an AI backend are not connected. Prices and social proof are illustrative content.
+The build only copies `index.html`, `assets/`, and `.nojekyll` into `_site/`.
 
-Photography sourced from the freely reusable [Woodex demo assets](https://github.com/codewithsadee/woodex). Replace with SECHA’s licensed project photos before launch.
+## Features and scope
 
-## Deployment and blank-page troubleshooting
+Service category filters, favorites retained in browser storage when available, location selection, responsive navigation, and a keyboard-accessible Genie room/budget planning flow. Text-only chat replies are scripted suggestions; live AI, booking, inventory, and authentication are not connected. Prices and social proof are illustrative.
 
-The repository's `index.html` is a Vite source entry. Browsers and plain static hosts cannot run its JSX directly. Use `npm run dev` for development, or deploy the **contents of `dist/` after `npm run build`**. Do not serve the repository root as the production site.
-
-The included GitHub Actions workflow builds and deploys `dist/` on pushes to `main`. For GitHub Pages, set **Settings → Pages → Build and deployment → Source → GitHub Actions**. The project URL is `https://jplovensa.github.io/HomeGenie/` after the deployment succeeds. Built assets and images use relative paths so both root hosting and the `/HomeGenie/` project path work.
-
-To check the production build locally, run `npm run build` followed by `npm run preview`. Open the HTTP address printed by Vite, rather than double-clicking an HTML file.
+Photography is from the freely reusable [Woodex demo assets](https://github.com/codewithsadee/woodex). Replace with SECHA project photography before launch. Inter's license is included in `assets/fonts/OFL.txt`.

@@ -20,12 +20,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
+      - name: Prepare static website (no dependencies)
+        run: npm test
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
   deploy:
     needs: build
@@ -38,6 +37,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/configure-pages@v5
-      - name: Deploy built site
+      - name: Deploy static site
         id: deployment
         uses: actions/deploy-pages@v4
