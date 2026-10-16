@@ -375,7 +375,7 @@ async function showReceipt(reference) {
 async function init() {
   try {
     const response = await fetch(
-      new URL("./assets/catalog.json", document.baseURI),
+      new URL("./assets/catalog.json?v=3.0.0", document.baseURI),
     );
     if (!response.ok) throw new Error("Catalog unavailable");
     state.products = await response.json();

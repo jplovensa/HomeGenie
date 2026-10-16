@@ -25,7 +25,7 @@ test("all HTML assets have project-safe relative paths and exist", async () => {
   assert(paths.length >= 10);
   for (const file of paths) {
     assert(file.startsWith("./assets/"), file);
-    await access(file);
+    await access(file.split("?")[0]);
   }
 });
 test("every catalog image and CSS font is bundled locally", async () => {

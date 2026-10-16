@@ -23,7 +23,7 @@ Storefront: https://jplovensa.github.io/HomeGenie/
 1. Open [Deploy to Render](https://render.com/deploy?repo=https://github.com/jplovensa/HomeGenie). The included `render.yaml` prepares a Node web service with a free plan, health check, and generated order-signing secret.
 2. In Render's secure environment settings, enter the **sandbox server key** from your Midtrans account as `MIDTRANS_SERVER_KEY`. Never put it in Git, `assets/config.js`, or chat. Leave `MIDTRANS_IS_PRODUCTION=false` for testing.
 3. After deployment, check `https://YOUR-SERVICE.onrender.com/api/health`. It should report `configured: true` and `mode: sandbox`. Free Render services may need time to wake up after inactivity.
-4. In `assets/config.js`, set `commerceApiUrl` to `https://YOUR-SERVICE.onrender.com/api`, then commit and deploy the storefront. Use the real assigned Render URL, not a guessed hostname. `SITE_URL` and the allowed storefront origin are already set to the GitHub Pages site in the blueprint.
+4. In `assets/config.js`, set `commerceApiUrl` to `https://YOUR-SERVICE.onrender.com/api`, then bump the `config.js?v=...` version in `index.html`, commit, and deploy the storefront. Use the real assigned Render URL, not a guessed hostname. `SITE_URL` and the allowed storefront origin are already set to the GitHub Pages site in the blueprint.
 5. Run a complete Midtrans sandbox purchase using Midtrans test payment instructions. Verify the total, customer/project details, receipt return, and status in the Midtrans dashboard. This has **not** been performed without a merchant account/key.
 6. After merchant onboarding and testing, put the production server key in Render and set `MIDTRANS_IS_PRODUCTION=true`. Never use sandbox payment methods with a production key.
 
