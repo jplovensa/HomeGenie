@@ -7,10 +7,10 @@ import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
 import './styles.css';
 const img=(id)=>({
-'photo-1600210492486-724fe5c67fb0':'/images/living-room.jpg',
-'photo-1556912172-45b7abe8b7e1':'/images/kitchen.jpg',
-'photo-1620626011761-996317b8d101':'/images/styling.jpg',
-'photo-1616486338812-3dadae4b4ace':'/images/finishes.jpg'
+'photo-1600210492486-724fe5c67fb0':`${import.meta.env.BASE_URL}images/living-room.jpg`,
+'photo-1556912172-45b7abe8b7e1':`${import.meta.env.BASE_URL}images/kitchen.jpg`,
+'photo-1620626011761-996317b8d101':`${import.meta.env.BASE_URL}images/styling.jpg`,
+'photo-1616486338812-3dadae4b4ace':`${import.meta.env.BASE_URL}images/finishes.jpg`
 }[id]);
 const services=[
  {id:1, category:'Interior styling',title:'A living room, more you.',description:'Thoughtful styling. A fresh perspective.',price:'1,500,000',image:img('photo-1600210492486-724fe5c67fb0'),tag:'MOST LOVED',rating:'4.9',count:'128',duration:'From 3 days',icon:Sofa},
